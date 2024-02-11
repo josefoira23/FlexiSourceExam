@@ -1,4 +1,7 @@
+using FlexiSourceExam.Interface;
 using FlexiSourceExam.Model;
+using FlexiSourceExam.Services;
+using Microsoft.OpenApi.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,8 +13,24 @@ builder.Services.AddEndpointsApiExplorer();
 
 //Configuration
 builder.Services.Configure<RainfallSettings>(builder.Configuration.GetSection("RainfallSettings"));
+//Interface config
+builder.Services.AddScoped<IRainfall, RainfallServices>();
 
-builder.Services.AddSwaggerGen();
+builder.Services.AddSwaggerGen(setup => setup.SwaggerDoc("v1", new OpenApiInfo()
+{
+    Description = "An API which provides rainfall reading data",
+    Title = "Rainfall Api",
+    Version = "1.0",
+    Contact = new OpenApiContact()
+    {
+        Name = "Sorted",
+        Url = new Uri("https://sorted.com/"),
+
+    },
+
+
+}));
+
 
 var app = builder.Build();
 

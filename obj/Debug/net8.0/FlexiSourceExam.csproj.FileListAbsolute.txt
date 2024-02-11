@@ -31,3 +31,4 @@ E:\FlexiSourceExam\FlexiSourceExam\obj\Debug\net8.0\refint\FlexiSourceExam.dll
 E:\FlexiSourceExam\FlexiSourceExam\obj\Debug\net8.0\FlexiSourceExam.pdb
 E:\FlexiSourceExam\FlexiSourceExam\obj\Debug\net8.0\FlexiSourceExam.genruntimeconfig.cache
 E:\FlexiSourceExam\FlexiSourceExam\obj\Debug\net8.0\ref\FlexiSourceExam.dll
+E:\FlexiSourceExam\FlexiSourceExam\bin\Debug\net8.0\Newtonsoft.Json.dll
